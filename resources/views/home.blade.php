@@ -1,11 +1,21 @@
 <x-layout>
     <header class=" container-fluid header">
-         <div class="container-fluid">
+         <div class="container">
             <div class="row">
-                <div class="col-12 text-white ">
-                    <h1>Vendi il tuo strumento</h1>
-                    <p class="fs-3">Compra sul nostro sito</p>
-                    <button></button>
+                <div class="col-12 text-danger ">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <p> VENDI IL TUO STRUMENTO MUSICALE</p>
+                          </div>
+                          <div class="carousel-item">
+                           <p>COMPRALO DA NOI!</p>                          
+                        </div>
+                          <div class="carousel-item">
+                            <p>SPENDI IN MODO INTELLIGENTE</p>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
