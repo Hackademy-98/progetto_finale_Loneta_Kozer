@@ -42,7 +42,7 @@ class ProductController extends Controller
             "price" => $request->price,
             "img" => $file ? $file->store('public/images') : "public/images/default.jpg"
         ]);
-        return redirect()->route('user.home')->with('success','Product created');
+        return redirect()->route('user.home')->with('success','Product created!');
     }
 
     /**
@@ -58,15 +58,24 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('product.edit', compact('product'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Product $product)
+    public function update(ProductRequest $request, Product $product)
     {
-        //
+        $file = $request->file('img');
+        $product->update([
+            "user_id" => Auth::user()->id,
+            "name"=> $request->name,
+            "description" => $request->description,
+            "price" => $request->price,
+            "img" => $file ? $file->store('public/images') : $product->img
+        ]);
+        return redirect()->route('user.home')->with('success','Product updated!');
+
     }
 
     /**

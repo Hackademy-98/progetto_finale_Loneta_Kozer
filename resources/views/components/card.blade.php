@@ -6,5 +6,9 @@
           <p class="card-text">{{$product->price}}</p>
           <p class="text-end">{{$product->user->name}}</p>
           <a href="#"class="btn btn-primary">Detail</a>
+          @if (Route::currentRouteName() == 'user.home')
+          <a href="{{ route('product.edit',compact("product"))}}"class="btn btn-warning">Edit</a>
+    
+          @endif
         </div>
       </div>
