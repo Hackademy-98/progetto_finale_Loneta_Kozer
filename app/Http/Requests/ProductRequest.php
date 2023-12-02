@@ -27,5 +27,13 @@ class ProductRequest extends FormRequest
             "price" => "required|decimal:0,2",
             "img" => "image"
         ];
+    }   public function messages(){
+        return[
+            "title.required" => "Campo obligatorio",
+            "title.max" => "Titolo tropo lungo",
+            "description.required" => "Campo obligatorio",
+            "price.required" => "Campo obligatorio"
+        ];
     }
 }
+

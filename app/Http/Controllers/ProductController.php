@@ -35,12 +35,13 @@ class ProductController extends Controller
     public function store(ProductRequest $request)
     {
         $file = $request->file('img');
-        Product::create([
+       $product= Product::create([
             "user_id" => Auth::user()->id,
             "name"=> $request->name,
             "description" => $request->description,
             "price" => $request->price,
-            "img" => $file ? $file->store('public/images') : "public/images/default.png"         ]);
+            "img" => $file ? $file->store('public/images') : "public/images/default.png"     
+            ]);
         return redirect()->route('user.home')->with('success','Product created!');
     }
 
@@ -49,7 +50,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view('product.show',compact('product'));
     }
 
     /**

@@ -20,9 +20,12 @@ Route::get("/", [PublicController::class,'home'])->name('home');
 Route::get("/home", [UserController::class,'home'])->name('user.home');
 // creare una rotta dove posso vedere tutti prodotti creati
 Route::get('/products', [ProductController::class,'index'])->name('product.index');
+Route::get('/game/{product}',[ProductController::class,'show'])->name('product.show');
+
 Route::get('/product/create',[ProductController::class,'create'])->name('product.create');
 Route::post('/product/store', [ProductController::class,'store'])->name('product.store');
-
+// rotte per modifiche
 Route::get('/product/edit/{product}',[ProductController::class,'edit'])->name('product.edit');
 Route::put('/product/update{product}',[ProductController::class,'update'])->name('product.update');
+// rotta per cancelare
 Route::delete('/product/delete{product}',[ProductController::class,'destroy'])->name('product.destroy');
