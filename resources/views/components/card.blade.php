@@ -8,7 +8,11 @@
           <a href="#"class="btn btn-primary">Detail</a>
           @if (Route::currentRouteName() == 'user.home')
           <a href="{{ route('product.edit',compact("product"))}}"class="btn btn-warning">Edit</a>
-    
+    <form action="{{route('product.destroy',compact('product'))}}" method="POST">
+      @csrf
+      @method('delete')
+      <button class="btn btn-danger" type="submit">Delete</button>
+    </form>
           @endif
         </div>
       </div>

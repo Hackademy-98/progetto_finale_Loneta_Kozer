@@ -40,8 +40,7 @@ class ProductController extends Controller
             "name"=> $request->name,
             "description" => $request->description,
             "price" => $request->price,
-            "img" => $file ? $file->store('public/images') : "public/images/default.jpg"
-        ]);
+            "img" => $file ? $file->store('public/images') : "public/images/default.png"         ]);
         return redirect()->route('user.home')->with('success','Product created!');
     }
 
@@ -83,6 +82,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return redirect()->route('user.home')->with('success','Product.deleted!');
     }
 }
