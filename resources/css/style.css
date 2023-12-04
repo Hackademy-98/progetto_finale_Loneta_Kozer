@@ -1,11 +1,18 @@
 .header{
     
-    
+   
    background-image: url('/public/media/header.jpg');
+
    background-repeat: no-repeat;
+   background-size: cover;
    width: 100%;
-   height: 75ch;
-   beckground-size: fluid;
+   height: 100vh;
+   
+   
+   
+
+  
+   
    
 
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ProductRequest;
@@ -26,7 +27,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('product.create');
+        $categories = Category::all();
+        return view('product.create',compact("categories"));
     }
 
     /**
@@ -34,12 +36,14 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
+        // dd($request);
         $file = $request->file('img');
        $product= Product::create([
             "user_id" => Auth::user()->id,
             "name"=> $request->name,
-            "description" => $request->description,
+            "description" => $request->description,            
             "price" => $request->price,
+            "category_id" => $request->category,
             "img" => $file ? $file->store('public/images') : "public/images/default.png"     
             ]);
         return redirect()->route('user.home')->with('success','Product created!');

@@ -17,6 +17,18 @@
                         <textarea class="form-control" id="description" name="description">{{ old ('description') }}</textarea>
                         @error('description') <p class="text-danger">{{$message}}</p>@enderror
                       </div>
+
+                      <div class="mb-3">
+                        <label class="form-label" for="category">Category</label>
+                        <select class="form-select" id="category" name="category">
+                          <option selected>Select category</option>
+                          @foreach ($categories as $category)
+                          <option value="{{$category->id}}">{{$category->name}}</option>
+                          @endforeach
+                        </select>
+                      </div>
+
+
                     <div class="mb-3">
                       <label class="form-label" for="price">Price</label>
                       <input type="text" class="form-input" id="price"name="price" value="{{old('price')}}">

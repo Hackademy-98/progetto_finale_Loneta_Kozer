@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Create product</h1>
+                <h1>Update product</h1>
             </div>
             <div class="col-12">
                 <form method="POST" action="{{route('product.update',compact("product"))}}" enctype="multipart/form-data">
