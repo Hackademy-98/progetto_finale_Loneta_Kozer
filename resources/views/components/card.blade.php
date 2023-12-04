@@ -4,8 +4,7 @@
         <div class="card-body">
             <h5 class="card-title">{{$product->name}}</h5>
           <p class="card-text">{{$product->price}}</p>
-          <p class="text-end">{{$product->category->name}}</p>
-
+           <a href="{{ route('product.filterByCategory',["category"=>$product->category]) }}" class="text-end">{{$product->category->name}}</a>
           <p class="text-end">{{$product->user->name}}</p>
           <a href="{{route('product.show',compact('product'))}}"class="btn btn-primary">Detail</a>
 

@@ -28,7 +28,7 @@ class ProductController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('product.create',compact("categories"));
+        return view('product.create',compact('categories'));
     }
 
     /**
@@ -90,4 +90,12 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('user.home')->with('success','Product.deleted!');
     }
+    // filtra i prodoti in base ad una categoria selezionata
+    public function filterByCategory(Category $category){
+        // $products = $category->products;
+
+        return view('product.filterByCategory',compact('category'));
+
+    }
+
 }

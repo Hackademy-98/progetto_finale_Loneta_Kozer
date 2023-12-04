@@ -29,3 +29,5 @@ Route::get('/product/edit/{product}',[ProductController::class,'edit'])->name('p
 Route::put('/product/update{product}',[ProductController::class,'update'])->name('product.update');
 // rotta per cancelare
 Route::delete('/product/delete{product}',[ProductController::class,'destroy'])->name('product.destroy');
+// rotta per categorie 1-n 
+Route::get('/products/category{category}',[ProductController::class,'filterByCategory'])->name('product.filterByCategory');
