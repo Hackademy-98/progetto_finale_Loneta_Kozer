@@ -23,6 +23,30 @@
                       <input type="text" class="form-input" id="price"name="price" value="{{$product->price}}">
                       @error('price') <p class="text-danger">{{$message}}</p>@enderror
                     </div>
+
+                    {{-- <label class="form-label" for="category">Category</label>
+                    <select class="form-select" id="category" name="category">
+                        <option selected>Select category</option>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}"@selected($category == $product->category) >{{ $category->name }}</option>
+                        @endforeach
+                    </select> --}}
+
+                    <div class="row my-4">
+                      <div class="col-12">
+                          <h5>Category</h5>
+                      </div>
+                      @foreach ($categories as $category)
+                          <div class="col-6 col-md col-lg-2 form-check">
+                              <input class="form-check-input" type="checkbox" value="{{ $category->id }}"
+                                  id="category" name="category[]" @checked($product->categories->contains($category))>
+                              <label class="form-check-label" for="flexCheckDefault">
+                                  {{ $category->name }}
+                              </label>
+                          </div>
+                      @endforeach
+
+
                     <div class="mb-3 form-check">
                         <label class="form-label" for="img">Image</label>
                         <input type="file" class="form-input" id="img" >

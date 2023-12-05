@@ -43,9 +43,11 @@ class ProductController extends Controller
             "name"=> $request->name,
             "description" => $request->description,            
             "price" => $request->price,
-            "category_id" => $request->category,
+            // "category_id" => $request->category,
+            // "product_id" => $request->id,
             "img" => $file ? $file->store('public/images') : "public/images/default.png"     
             ]);
+            $product->categories()->attach($request->category);
         return redirect()->route('user.home')->with('success','Product created!');
     }
 
@@ -62,7 +64,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('product.edit', compact('product'));
+        $categories = Category::all();
+        return view('product.edit', compact('product','categories'));
     }
 
     /**
@@ -78,6 +81,9 @@ class ProductController extends Controller
             "price" => $request->price,
             "img" => $file ? $file->store('public/images') : $product->img
         ]);
+         $product->categories()->detach();
+        $product->categories()->attach($request->category);
+
         return redirect()->route('user.home')->with('success','Product updated!');
 
     }
