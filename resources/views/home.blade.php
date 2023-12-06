@@ -1,4 +1,10 @@
 <x-layout>
+  @if(session()->has('success'))
+  <div>
+    {{session('success')}}
+  </div>
+  @endif
+
     <header class="header">
          <div class="container">
             <div class="row">

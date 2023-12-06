@@ -31,3 +31,6 @@ Route::put('/product/update{product}',[ProductController::class,'update'])->name
 Route::delete('/product/delete{product}',[ProductController::class,'destroy'])->name('product.destroy');
 // rotta per categorie 1-n 
 Route::get('/products/category/{category}',[ProductController::class,'filterByCategory'])->name('product.filterByCategory');
+// rotta per visualizzare un form per conttatare
+Route::get('/contact-us',[PublicController::class,'form'])->name('form');
+Route::post('/contact-email',[PublicController::class,'sendEmail'])->name('send.email');

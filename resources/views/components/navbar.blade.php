@@ -12,6 +12,10 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('product.index')}}">Tutti i prodotti</a>
           </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('form')}}">Contattaci</a>
+          </li>
         </ul>
           @auth
           <ul class="navbar-nav">
