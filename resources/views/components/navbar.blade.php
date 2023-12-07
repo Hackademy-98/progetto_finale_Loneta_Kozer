@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg opacity-75%">
+<nav class="navbar text-light navbar-expand-lg opacity-75%">
     <div class="container-fluid opacity-75%">
       <a class="navbar-brand" href="#"><img src="./media/drums.webp" alt="" class="navbar-logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

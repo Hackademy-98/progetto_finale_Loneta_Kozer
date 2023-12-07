@@ -2,26 +2,50 @@
    --a: rgb(70, 119, 112);
    --b: rgb(89, 138, 110);
    --c: rgb(71, 98, 98);
-   --d: rgb(243, 245, 246);
+   --d: rgb(244, 246, 243);
+   --e:  rgb(191, 39, 39);
+   --f:  rgb(68, 48, 48);
 }
-.header{
+.fc-p{
+   color: var(--e)
+}
+body{
+   margin: 0;
+   background-color:var(--d) ;
+}
+.rightCol{
     
    
    background-image: url('/public/media/header.jpg');
 
    background-repeat: no-repeat;
    background-size: cover;
-   height: 100vh;
-
-      
+   height: 75vh;
 }
-.row{
-   height: 1200px;
+.body{
+   margin:0;
+   background-color: var(--d);
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   text-decoration: antiquewhite;
 }
 .navbar{
    background-color: var(--a);
+   
 }
 .navbar-logo{
    width: 30px;
    height:30px ;
+   
 }
+.footer-l{
+   background-color: var(--a) ;
+   height: 15vh;
+}
+.leftCol{
+   background-image: url('/public/media/pianoforte.jpg');
+   background-size: cover;
+height: 58vh;
+
+
+}   
+
