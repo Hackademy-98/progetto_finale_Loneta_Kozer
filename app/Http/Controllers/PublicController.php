@@ -2,14 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\ConfirmationEmail;
+use Illuminate\Support\Facades\Mail;
 
 class PublicController extends Controller
 {
+    // public function home(){
+    //     return view("home");
+    // }
     public function home(){
-        return view("home");
+        
+        $products = Product::orderBy('created_at','desc')->take(6)->get();
+        // dd($product);
+        return view('home',compact('products'));
+        
     }
     public function form(){
         return view('form');

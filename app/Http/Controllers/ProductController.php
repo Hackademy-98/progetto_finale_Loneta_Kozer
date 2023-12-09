@@ -20,6 +20,8 @@ class ProductController extends Controller
     {
         $products = Product::all();
         return view('product.index',compact('products'));
+    //     $products = Product::orderBy('created_at','desc')->get();
+    //     return view('product.index', compact('products'));
     }
 
     /**

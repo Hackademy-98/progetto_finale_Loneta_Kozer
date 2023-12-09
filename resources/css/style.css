@@ -13,23 +13,24 @@ body{
    margin: 0;
    background-color:var(--d) ;
 }
-.rightCol{
+.headerCustom{
     
    
    background-image: url('/public/media/header.jpg');
 
    background-repeat: no-repeat;
    background-size: cover;
-   height: 75vh;
+   height: 100vh;
 }
 .body{
    margin:0;
    background-color: var(--d);
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
    text-decoration: antiquewhite;
 }
 .navbar{
    background-color: var(--a);
+   font-style: var(--e) !important;
    
 }
 .navbar-logo{
@@ -39,13 +40,42 @@ body{
 }
 .footer-l{
    background-color: var(--a) ;
-   height: 15vh;
+   height: 10vh;
 }
-.leftCol{
+/* .leftCol{
    background-image: url('/public/media/pianoforte.jpg');
    background-size: cover;
 height: 58vh;
 
+} */
+.card{
+   margin-left: 10px;
+   border: 2px solid var(--e);
+   padding: 7px 12px;
+   border-radius: 15px;
+   color: var(--a);
+   font-weight: 600;
+   background-color: var(--d);
+} 
+.slideLeft{
+   width: 100px;
+   height: 100px;
+}  
+.slideLeft{
+   animation: slideTree 3s ease forwards;
+   transform: translateX(1200px);
+   
 
-}   
+}
+.slideLeft{
+   animation: slideTree 3s ease forwards;
 
+animation-delay: 1000ms;   
+}
+@keyframes slideTree{
+from{
+   transform: translateX(1200px);
+}to{
+   transform:translateX(0px);
+}
+}
