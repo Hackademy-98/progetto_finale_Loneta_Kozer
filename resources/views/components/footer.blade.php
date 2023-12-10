@@ -54,7 +54,7 @@
       <div class="col-6 col-md-2 mb-3">
         <h5>Section</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="{{route('home')}}" class="nav-link p-0 text-body-secondary">Home</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
@@ -72,18 +72,18 @@
             <button class="btn btn-primary" type="button">Subscribe</button>
           </div>
         </form>
-
-<a href=""><i class="fa-brands fs-5 fa-instagram"></i></a>
-<a href=""><i class="fa-brands fs-5 fa-square-facebook text-primary"></i></a>
-<a href=""><i class="fa-brands fs-5 fa-tiktok text-dark"></i></a>
- <a href=""><i class="fa-brands fs-5 fa-whatsapp text-success"></i></a> 
- <a href=""><i class="fa-brands fs-5 fa-youtube text-danger"></i></a>       
-      
+<div class="pt-4 d-flex justify-content-center">
+<a class="mx-2" href=""><i class="fa-brands fs-5 fa-instagram"></i></a>
+<a class="mx-2" href=""><i class="fa-brands fs-5 fa-square-facebook text-primary"></i></a>
+<a class="mx-2" href=""><i class="fa-brands fs-5 fa-tiktok text-dark"></i></a>
+ <a class="mx-2" href=""><i class="fa-brands fs-5 fa-whatsapp text-success"></i></a> 
+ <a class="mx-2" href=""><i class="fa-brands fs-5 fa-youtube text-danger"></i></a>       
+</div>
       </div>
     </div>
 
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+      <p>&copy; 2023 Vendita di strumenti misicali. | Contact: info@strumentimisicali.com</p>
       <ul class="list-unstyled d-flex">
         <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
         <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>

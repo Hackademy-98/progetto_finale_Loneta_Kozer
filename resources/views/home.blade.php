@@ -27,11 +27,22 @@
           </div>
         </div>
 {{--  imagine a destra        --}}
-        <div class="col-12 col-md-8 rightCol d-flex justify-content-center flex-column">
-          <img class="slideLeft" src="./media/uomoNeve.jpg" alt="">
-          <img class="slideLeft" src="./media/tree.jpg" alt="">
+<div class="container">
+  <div class="row">
+    <div class="col-6 col-md-6 rightCol d-flex justify-content-center flex-column">
+      <img class="slideLeft" src="./media/uomoNeve.jpg" alt="">
 
-        </div>
+      </div>
+      <div class="col-6 col-md-6 rightCol d-flex justify-content-center flex-column">
+
+      <img class="slideLeft" src="./media/tree2.jpg" alt="">
+
+
+    </div>
+    
+  </div>
+</div>
+        
         
       </div>
     </div>

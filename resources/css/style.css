@@ -59,7 +59,7 @@ height: 58vh;
 } 
 .slideLeft{
    width: 100px;
-   height: 100px;
+   height: 150px;
 }  
 .slideLeft{
    animation: slideTree 3s ease forwards;
@@ -69,6 +69,7 @@ height: 58vh;
 }
 .slideLeft{
    animation: slideTree 3s ease forwards;
+   transform: translateX(1200px);
 
 animation-delay: 1000ms;   
 }
