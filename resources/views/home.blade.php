@@ -7,7 +7,7 @@
   <body>
     
   
-  <header class="headerCustom overflow-x-hidden">
+  <header class="headerCustom overflow-hidden">
     <div class="container vh-100">
       <div class="row vh-100">
 {{--  lato sinistro         --}}
@@ -33,14 +33,17 @@
       <img class="slideLeft" src="./media/uomoNeve.jpg" alt="">
 
       </div>
-      <div class="col-6 col-md-6 rightCol d-flex justify-content-center flex-column">
+      <div class="col-2 col-md-6 rightCol d-flex justify-content-end">
 
       <img class="slideLeft" src="./media/tree2.jpg" alt="">
-
+    
 
     </div>
-    
+    <span class="arrow">
+      <a class="arrowButton text-success position-absolute bottom-0 end-0 pe-5" href="#target"><i class="fa-solid fa-circle-arrow-down fa-beat fs-1"></i></a>
+  </span>
   </div>
+
 </div>
         
         

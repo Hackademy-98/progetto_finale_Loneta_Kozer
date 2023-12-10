@@ -56,27 +56,34 @@ height: 58vh;
    color: var(--a);
    font-weight: 600;
    background-color: var(--d);
-} 
+}
+.arrow{
+   color:var(--b) ;
+}
+
 .slideLeft{
    width: 100px;
    height: 150px;
 }  
 .slideLeft{
    animation: slideTree 3s ease forwards;
-   transform: translateX(1200px);
+   transform: translateY(1200px);
+   opacity: 0;
    
 
 }
 .slideLeft{
    animation: slideTree 3s ease forwards;
-   transform: translateX(1200px);
+   transform: translateY(1200px);
 
 animation-delay: 1000ms;   
 }
 @keyframes slideTree{
 from{
-   transform: translateX(1200px);
+   transform: translateY(1200px);
+   opacity: 0;
 }to{
-   transform:translateX(0px);
+   transform:translateY(0px);
+   opacity: 1;
 }
 }
