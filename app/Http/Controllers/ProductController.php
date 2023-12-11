@@ -95,6 +95,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
+        $product->categories()->detach();
         $product->delete();
         return redirect()->route('user.home')->with('success','Product.deleted!');
     }
